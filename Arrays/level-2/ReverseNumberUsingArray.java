@@ -6,7 +6,6 @@ public class ReverseNumberUsingArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Step 1: Take user input
         System.out.print("Enter a positive integer: ");
         int number = sc.nextInt();
 
@@ -16,7 +15,6 @@ public class ReverseNumberUsingArray {
             return;
         }
 
-        // Step 2: Count digits and store in array
         int temp = number;
         int count = 0;
         while (temp != 0) {
@@ -31,7 +29,6 @@ public class ReverseNumberUsingArray {
             temp /= 10;
         }
 
-        // Step 3: Display digits in reverse order
         System.out.println("\nDigits in reverse order:");
         for (int i = 0; i < count; i++) {
             System.out.print(digits[i]);
@@ -39,4 +36,5 @@ public class ReverseNumberUsingArray {
 
         sc.close();
     }
+
 }
