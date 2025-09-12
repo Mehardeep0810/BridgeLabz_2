@@ -6,7 +6,6 @@ public class DynamicDigitAnalyzer {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Step 1: Take user input
         System.out.print("Enter a positive integer: ");
         int number = sc.nextInt();
 
@@ -16,16 +15,13 @@ public class DynamicDigitAnalyzer {
             return;
         }
 
-        // Step 2: Initialize digit array and variables
         int maxDigit = 10;
         int[] digits = new int[maxDigit];
         int index = 0;
 
-        // Step 3: Extract digits and store in array with dynamic resizing
         while (number != 0) {
             int digit = number % 10;
 
-            // Resize array if needed
             if (index == maxDigit) {
                 maxDigit += 10;
                 int[] temp = new int[maxDigit];
@@ -39,7 +35,6 @@ public class DynamicDigitAnalyzer {
             number /= 10;
         }
 
-        // Step 4: Find largest and second largest digits
         int largest = -1;
         int secondLargest = -1;
 
@@ -52,7 +47,6 @@ public class DynamicDigitAnalyzer {
             }
         }
 
-        // Step 5: Display results
         System.out.println("\nDigits stored in array:");
         for (int i = 0; i < index; i++) {
             System.out.print(digits[i] + " ");
@@ -63,4 +57,5 @@ public class DynamicDigitAnalyzer {
 
         sc.close();
     }
+
 }
