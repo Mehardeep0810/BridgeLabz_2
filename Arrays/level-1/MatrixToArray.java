@@ -6,14 +6,12 @@ public class MatrixToArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Step 1: Get user input for dimensions
         System.out.print("Enter number of rows: ");
         int rows = sc.nextInt();
 
         System.out.print("Enter number of columns: ");
         int cols = sc.nextInt();
 
-        // Step 2: Create 2D array and take input
         int[][] matrix = new int[rows][cols];
         System.out.println("\nEnter elements of the matrix:");
         for (int i = 0; i < rows; i++) {
@@ -23,7 +21,6 @@ public class MatrixToArray {
             }
         }
 
-        // Step 3: Create 1D array and copy elements
         int[] array = new int[rows * cols];
         int index = 0;
 
@@ -33,7 +30,6 @@ public class MatrixToArray {
             }
         }
 
-        // Step 4: Display the 1D array
         System.out.println("\nElements copied into 1D array:");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
@@ -41,4 +37,5 @@ public class MatrixToArray {
 
         sc.close();
     }
+
 }
