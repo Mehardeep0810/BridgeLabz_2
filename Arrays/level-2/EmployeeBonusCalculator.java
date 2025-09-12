@@ -27,7 +27,7 @@ public class EmployeeBonusCalculator {
 
             if (salary <= 0 || service < 0) {
                 System.out.println("Invalid input. Salary must be > 0 and service ≥ 0. Please re-enter.");
-                i--; // Retry current employee
+                i--; 
                 continue;
             }
 
@@ -35,7 +35,7 @@ public class EmployeeBonusCalculator {
             yearsOfService[i] = service;
         }
 
-        //Bonus calculation loop
+       
         for (int i = 0; i < 10; i++) {
             double bonusRate = (yearsOfService[i] > 5) ? 0.05 : 0.02;
             bonuses[i] = salaries[i] * bonusRate;
@@ -60,4 +60,5 @@ public class EmployeeBonusCalculator {
 
         sc.close();
     }
+
 }
