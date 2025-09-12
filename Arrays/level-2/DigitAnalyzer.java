@@ -6,7 +6,7 @@ public class DigitAnalyzer {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Step 1: Take user input
+  
         System.out.print("Enter a positive integer: ");
         int number = sc.nextInt();
 
@@ -16,23 +16,23 @@ public class DigitAnalyzer {
             return;
         }
 
-        // Step 2: Initialize digit array and variables
+    
         int maxDigit = 10;
         int[] digits = new int[maxDigit];
         int index = 0;
 
-        // Step 3: Extract digits and store in array
+    
         while (number != 0) {
             int digit = number % 10;
             digits[index++] = digit;
             number /= 10;
 
             if (index == maxDigit) {
-                break; // Stop if array is full
+                break; 
             }
         }
 
-        // Step 4: Find largest and second largest digits
+      
         int largest = -1;
         int secondLargest = -1;
 
@@ -45,7 +45,6 @@ public class DigitAnalyzer {
             }
         }
 
-        // Step 5: Display results
         System.out.println("\nDigits stored in array:");
         for (int i = 0; i < index; i++) {
             System.out.print(digits[i] + " ");
@@ -56,4 +55,5 @@ public class DigitAnalyzer {
 
         sc.close();
     }
+
 }
